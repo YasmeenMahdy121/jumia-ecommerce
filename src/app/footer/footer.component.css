@@ -1,0 +1,60 @@
+footer .footer-up {
+  background-color: #282828;
+}
+footer .footer-up .new-to-jumia {
+  margin-top: 25px;
+}
+footer .footer-up .new-to-jumia p {
+  color: rgb(199, 199, 199);
+  font-size: 13px;
+}
+footer .footer-up .new-to-jumia form {
+  width: 75%;
+}
+@media screen and (max-width: 992px) {
+  footer .footer-up .new-to-jumia form {
+    width: 100%;
+  }
+}
+footer .footer-down {
+  background-color: #323232;
+}
+footer .footer-down h5 {
+  font-size: 15px;
+}
+footer .footer-down ul {
+  list-style: none;
+  padding: 0;
+  font-size: 13px;
+  color: rgb(199, 199, 199);
+}
+footer .footer-down ul li {
+  margin-top: 5px;
+}
+footer .footer-down .social, footer .footer-down .payment {
+  font-size: 25px;
+}
+footer .footer-down .social h5, footer .footer-down .payment h5 {
+  font-size: 17px;
+}
+footer .footer-down .social li, footer .footer-down .payment li {
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s;
+}
+footer .footer-down .social li:hover, footer .footer-down .payment li:hover {
+  color: #f68b1e;
+}
+footer .footer-down .divider {
+  height: 1px;
+  width: 100%;
+  background-color: rgb(184, 184, 184);
+}
+footer .footer-down .footer-end li {
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s;
+}
+footer .footer-down .footer-end li:hover {
+  color: #f68b1e;
+}/*# sourceMappingURL=footer.component.css.map */

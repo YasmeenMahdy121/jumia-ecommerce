@@ -1,0 +1,41 @@
+.search-results {
+  padding: 10px 0;
+}
+.search-results .card {
+  padding: 10px;
+  border-radius: 0;
+  border: none;
+  position: relative;
+  color: #111;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.search-results .card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.search-results .card .discount {
+  position: absolute;
+  right: 10px;
+  font-size: 13px;
+  color: #f68b1e;
+  background-color: #feeedd;
+  padding: 3px 5px;
+  border-radius: 3px;
+}
+.search-results .card .product-title {
+  display: block;
+  width: 100%;
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.search-results .card .price-with-discount {
+  font-size: 18px;
+  font-weight: 700;
+}
+.search-results .card .price-without-discount {
+  font-size: 13px;
+  color: rgb(134, 134, 134);
+  text-decoration: line-through;
+}/*# sourceMappingURL=search.component.css.map */

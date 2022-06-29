@@ -1,0 +1,37 @@
+<div class="saved-items">
+  <h2>Saved Items</h2>
+  <hr/>
+  <div class="empty-items m-auto" *ngIf="userSavedItemsSize?false:true">
+      <h3>You have placed no saved items yet!</h3>
+      <span>All your saved items will be saved here for you to access their state anytime.</span>
+      <br/>
+      <a routerLink="">
+          <button class="shopping">COUNTINUE SHOPPING</button>
+      </a>
+  </div>
+  <div *ngIf="userSavedItemsSize?true:false">
+    <div class="saved-items-details d-flex" *ngFor="let product of userSavedItems">
+      <div class="d-flex">
+          <a routerLink='{{"../../product/"+product.id}}'><img src={{product.image}} alt="order-img"/></a>
+          <div class="saved-item-details">
+              <a href="#">
+                  <p>{{product.title}}</p>
+              </a>
+              <h6 class="saved-item-price">
+                EGP {{((product.discount/100)*product.price) | number:'1.2-3' }}
+              </h6>
+              <p class="saved-item-reval">EGP {{product.price | number:'1.2-3'}}
+              </p>
+              <span>-{{product.discount}}%</span>
+          </div>
+      </div>
+      <div>
+          <button class="buy-now" (click)="addToCart(product)">BUY NOW</button>
+          <button class="remove-item d-flex" (click)="remove(product)">
+              <i class="fa-regular fa-trash-can"></i>
+              REMOVE
+          </button>
+      </div>
+    </div>
+  </div>
+</div>

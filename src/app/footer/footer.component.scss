@@ -1,0 +1,62 @@
+@import '../helpers.scss';
+footer
+{
+  .footer-up{
+    background-color: #282828;
+    .new-to-jumia{
+      margin-top: 25px;
+      p{
+        color: rgb(199, 199, 199);
+        font-size: 13px;
+      }
+      form{
+        width: 75%;
+        @media screen and (max-width:992px){
+          width: 100%;
+        }
+      }
+    }
+  }
+  .footer-down{
+    background-color: #323232;
+    h5{
+      font-size: 15px;
+    }
+    ul{
+      list-style: none;
+      padding: 0;
+      font-size: 13px;
+      color: rgb(199, 199, 199);
+      li{
+        margin-top: 5px;
+      }
+    }
+    .social, .payment{
+      font-size: 25px;
+      h5{
+        font-size: 17px;
+      }
+      li{
+        cursor: pointer;
+        color: #fff;
+        transition: .3s;
+        &:hover{
+          color: $main-color;
+        }
+      }
+    }
+    .divider{
+      height: 1px;
+      width: 100%;
+      background-color: rgb(184, 184, 184);
+    }
+    .footer-end li{
+      cursor: pointer;
+      color: #fff;
+      transition: .3s;
+      &:hover{
+        color: $main-color;
+      }
+    }
+  }
+}

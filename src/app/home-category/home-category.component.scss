@@ -1,0 +1,59 @@
+@import '../helpers.scss';
+.header{
+  background-color: #fee2cc;
+  color: #111;
+  padding: 10px 20px;
+  border-radius: 3px 3px 0px 0;
+  h2{
+    font-size: 15px;
+    span{
+      font-size: 20px;
+    }
+  }
+  a{
+    text-decoration: none;
+    color: #111;
+  }
+}
+.category-body{
+  padding: 10px 0;
+  background-color: white;
+  .card{
+    padding: 10px;
+    border-radius: 0;
+    border: none;
+    position: relative;
+    color: #111;
+    cursor: pointer;
+    transition: .3s;
+    &:hover{
+      box-shadow: $box-shadow;
+    }
+    .discount{
+      position: absolute;
+      right: 10px;
+      font-size: 13px;
+      color: $main-color;
+      background-color: $main-color-hover;
+      padding: 3px 5px;
+      border-radius: 3px;
+    }
+    .product-title{
+      display: block;
+      width: 100%;
+      font-size: 15px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .price-with-discount{
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .price-without-discount{
+      font-size: 13px;
+      color: rgb(134, 134, 134);
+      text-decoration: line-through;
+    }
+  }
+}

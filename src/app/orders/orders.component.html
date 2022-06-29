@@ -1,0 +1,30 @@
+<div class="orders">
+  <h2>Orders</h2>
+  <hr/>
+  <div class="empty-order m-auto" *ngIf="userOrdersize?false:true">
+      <h3>You have placed no orders yet!</h3>
+      <span>All your orders will be saved here for you to access their state anytime.</span>
+      <br/>
+      <a routerLink="">
+          <button class="shopping">COUNTINUE SHOPPING</button>
+      </a>
+  </div>
+  <div *ngIf="userOrdersize?true:false">
+    <div class="orders-details d-flex" *ngFor="let product of userOrder">
+      <div class="d-flex">
+          <a href="#"><img src={{product.image}} alt="order-img"/></a>
+          <div class="order-details">
+              <a href="#">
+                  <p>{{product.title}}</p>
+              </a>
+              <h6 class="order-price">
+                EGP {{((product.discount/100)*product.price) | number:'1.2-3' }}
+              </h6>
+              <p class="order-reval">EGP {{product.price | number:'1.2-3'}}
+              </p>
+              <span>-{{product.discount}}%</span>
+          </div>
+      </div>
+  </div>
+  </div>
+</div>

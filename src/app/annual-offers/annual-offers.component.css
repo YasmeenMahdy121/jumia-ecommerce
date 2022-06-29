@@ -1,0 +1,13 @@
+.annual-offers {
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 3px;
+}
+.annual-offers img {
+  cursor: pointer;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+.annual-offers img:hover {
+  transform: scale(1.005, 1.02);
+}/*# sourceMappingURL=annual-offers.component.css.map */

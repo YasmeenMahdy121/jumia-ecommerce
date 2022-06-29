@@ -1,0 +1,60 @@
+.account-details {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  border-radius: 4px;
+  padding-bottom: 1px;
+}
+
+.account-details h2 {
+  margin-bottom: 0;
+  padding: 6px 14px;
+}
+
+.account-details hr {
+  padding: 0;
+  margin: 0;
+  background-color: currentColor;
+  opacity: 0.1;
+}
+
+.account-details form {
+  padding: 20px 13px;
+}
+
+.account-details form input,
+.account-details form select {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  border-radius: inherit;
+  margin-top: -10px;
+}
+
+.account-details form input:focus,
+.account-details form select:focus {
+  box-shadow: none;
+  border: none;
+  border-bottom: 2px solid #f68b1e;
+}
+
+.account-details form label {
+  color: #75757a;
+  margin-left: 11px;
+  font-size: 14px;
+}
+
+.account-details form button {
+  width: 100%;
+  font-size: 19px;
+  font-weight: 500;
+  padding: 10px;
+  background: #f68b1e;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  color: white;
+  margin-top: 25px;
+}
+
+.account-details form button:hover {
+  background: #e4811c;
+}/*# sourceMappingURL=account-details.component.css.map */

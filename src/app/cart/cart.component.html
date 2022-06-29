@@ -1,0 +1,85 @@
+
+<div class="container">
+    <div class="wrapper wrapper-content animated fadeInRight">
+      <div class="row mb-5">
+        <div class="col-md-9">
+          <div class="ibox">
+            <div class="ibox-title border-0">
+              <h5>Cart Shopping</h5>
+            </div>
+          </div>
+          <!-- item 1 -->
+          <div class="ibox-content" *ngFor="let product of userCart; let i = index;" [class.border-0]="i==0">
+            <div class="row d-flex justify-content-between align-items-center">
+              <div class="col-md-2 col-lg-2 col-xl-2">
+                <img src={{product.image}}
+                  class="img-fluid rounded-3" alt="Cotton T-shirt">
+                <div class="m-t-sm mt-3" >
+                  <a style="color: orange; text-decoration-line: none; cursor: pointer;" (click)="removeProduct(product)"><i class="fa fa-trash"></i> Remove item</a>
+                </div>
+              </div>
+              <div class="col-md-8 col-lg-8 col-xl-7">
+                <h3>
+                  <a class="text-navy" style="text-decoration: none;">
+                    {{product.title}}
+                  </a>
+                </h3>
+                <p class="small">
+                  Brand: {{product.brand}}
+                </p>
+              </div>
+
+              <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                <h5>
+                  EGP {{((product.discount/100)*product.price) | number:'1.2-3' }}
+                </h5>
+                <s class="small text-muted">EGP {{product.price | number:'1.2-3'}}</s>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 d-flex" style="margin-top:30px ;">
+                  <button class="btn btn-link px-2" style="background-color:#f68b1e;" (click)="decrease(product)">
+                    <i class="fa fa-minus text-light"></i>
+                  </button>
+
+                  <span id="form1" class="px-3 d-flex align-items-center justify-content-center" >{{product.quantity}}</span>
+
+                  <button class="btn btn-link px-2" style="background-color:#f68b1e;" (click)="increase(product)">
+                    <i class="fa fa-plus text-light"></i>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="ibox">
+            <div class="ibox-title border-0">
+              <h5>Cart Summary</h5>
+            </div>
+            <div class="ibox-content">
+              <span>
+                <h3 class="font-bold">
+                Total
+              </h3>
+              </span>
+              <h6 class="font-bold">
+                EGP {{totalPrice | number:'1.2-3'}}
+              </h6>
+              <hr>
+              <span class="text-muted small">
+                *For United States, France and Germany applicable sales tax will be applied
+              </span>
+              <div class="m-t-sm">
+                <div class="card-body">
+                  <button type="button" style= "background-color: #f68b1e;
+                  color: white;width:100% ;" id="btn" class="btn btn-block btn-lg mt-3" (click)="checkout()"><i
+                      class="fa fa-shopping-cart"></i>  CHECKOUT</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

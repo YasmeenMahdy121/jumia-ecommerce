@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" routerLink=""><img class="nav-logo" src="../../assets/nav_logo.png" alt="loading..."></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 w-100 d-flex justify-content-between">
+        <li class="nav-item search-form mt-lg-0 mt-5">
+          <form class="d-flex" role="search" (submit)="search()">
+            <div class="form-control me-2 p-1 ps-3 d-flex align-items-center">
+              <i class="fas fa-magnifying-glass" style="color: rgb(126, 126, 126);font-size: 20px;"></i>
+              <input [(ngModel)]="searchKeyword" class="form-control border-0" name="search" type="text" placeholder="Search products, brands and category" aria-label="Search">
+            </div>
+            <button class="btn" type="submit">Search</button>
+          </form>
+        </li>
+        <li class="nav-item dropdown  mt-lg-0 mt-3">
+          <a class="nav-link dropdown-toggle pe-4 position-absolute opacity-0" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Account
+          </a>
+          <div class="d-flex align-items-md-center h-100 gap-2">
+            <i *ngIf="isLogedIn?false:true" class="fas fa-user mb-1" style="font-size: 20px;"></i>
+            <i *ngIf="isLogedIn?true:false" class="fas fa-user-check mb-1" style="font-size: 20px;"></i>
+            <span *ngIf="isLogedIn?false:true">Account</span>
+            <span *ngIf="isLogedIn?true:false" class="user-name">Hi, user</span>
+            <i class="fas fa-angle-down"></i>
+            <!-- <i *ngIf="false" class="fas fa-angle-up"></i> -->
+          </div>
+          <ul class="dropdown-menu position-absolute p-0" aria-labelledby="navbarDropdown1">
+            <li class="signIn-nav-btn" *ngIf="!userKey"><a routerLink="/login">Sign In</a></li>
+            <li><hr class="dropdown-divider m-0"></li>
+            <li><a class="dropdown-item" routerLink="/user_account"><i class="far fa-user me-2 text-black" style="font-size: 20px;"></i> My Account</a></li>
+            <li><a class="dropdown-item" routerLink="/user_account/orders"><img src="../../assets/orders.png" class="nav-orders-link me-2" alt="user_account/orders"> Orders</a></li>
+            <li><a class="dropdown-item" routerLink="/user_account/saved_items"><i class="fa-regular fa-heart me-2 text-black" style="font-size: 20px;"></i> Saved Items</a></li>
+            <li><hr class="dropdown-divider m-0"></li>
+            <li class="logout-nav-btn" *ngIf="userKey"><button (click)="logout()">Log Out</button></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown mt-lg-0 mt-3">
+          <a class="nav-link dropdown-toggle pe-4 position-absolute opacity-0" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Help
+          </a>
+          <div class="d-flex align-items-md-center h-100 gap-2">
+            <i class="fa-regular fa-circle-question mb-1" style="font-size: 20px;"></i>
+            Help
+            <i class="fas fa-angle-down"></i>
+            <i *ngIf="false" class="fas fa-angle-up"></i>
+          </div>
+          <ul class="dropdown-menu position-absolute p-0" aria-labelledby="navbarDropdown2">
+            <li><a class="dropdown-item" routerLink="/user_account">Help Center</a></li>
+            <li><a class="dropdown-item" routerLink="/user_account/orders">Place & track order</a></li>
+            <li><a class="dropdown-item" routerLink="/user_account/saved_items">Order Cancelation</a></li>
+            <li><a class="dropdown-item" routerLink="/user_account/saved_items">Returns & Refunds</a></li>
+            <li><a class="dropdown-item" routerLink="/user_account/saved_items">Payment & Jumia account</a></li>
+            <li><hr class="dropdown-divider m-0"></li>
+            <li class="live-chat-btn"><button>Live Chat</button></li>
+          </ul>
+        </li>
+        <li class="nav-item mt-lg-0 mt-3">
+          <span class="d-flex align-items-md-center h-100 gap-2 shoppingCart" (click)="goToCart()">
+            <div class="position-relative ">
+              <i class="fas fa-cart-shopping"></i>
+              <span class="cartSize badge">{{userCartSize}}</span>
+            </div>
+            <span class="fw-bolder">Cart</span>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

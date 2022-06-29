@@ -1,0 +1,61 @@
+<div class="account-details">
+  <h2>Details</h2>
+  <hr/>
+  <form name="form" #regform="ngForm" (ngSubmit)="saveUserDeetails(regform)">
+      <div class="row">
+          <div class="col-md-6">
+              <div class="mb-3">
+                  <label for="exampleInputText" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="exampleInputText" required="required" pattern="^[A-Za-z]{3,}$" [class.is-invalid]="firstname.invalid && firstname.touched" name="firstname" [(ngModel)]="userModel.firstname" #firstname="ngModel"/>
+                  <div *ngIf="firstname.errors&&firstname.touched">
+                      <small class="text-danger" *ngIf="firstname.errors['required']">First Name  is Required</small>
+                      <small class="text-danger" *ngIf="firstname.errors['pattern']">Should Enter A Valid Name
+                      </small>
+                  </div>
+              </div>
+              <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">E-mail</label>
+                  <input style="background: none;" readonly="readonly" type="email" class="form-control" value="mohamedtolleba2016@gmail.com" id="exampleInputEmail1"/>
+              </div>
+              <label for="exampleInputText" class="form-label">Gender(Optional)</label>
+              <select class="form-select form-select" aria-label=".form-select-sm example">
+                  <option selected="selected" aria-readonly="true">Please Select</option>
+                  <option value="1">Male</option>
+                  <option value="2">Fmale</option>
+              </select>
+          </div>
+          <div class="col-md-6">
+              <div class="mb-3">
+                  <label for="exampleInputText" class="form-label">Last Name</label>
+                  <input type="text" class="form-control" value="Rashed" id="exampleInputText" required="required" pattern="^[A-Za-z]{3,}$" [class.is-invalid]="lastname.invalid && lastname.touched" name="lastname" [(ngModel)]="userModel.lastname" #lastname="ngModel"/>
+                  <div *ngIf="lastname.errors&&lastname.touched">
+                      <small class="text-danger" *ngIf="lastname.errors['required']">First Name  is Required</small>
+                      <small class="text-danger" *ngIf="lastname.errors['pattern']">Should Enter A Valid Name
+                      </small>
+                  </div>
+              </div>
+              <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Phone Number(Optional)</label>
+                  <input type="text" class="form-control" id="exampleInputText" pattern="^\d{11}$" [class.is-invalid]="phone.invalid && phone.touched" name="phone" [(ngModel)]="userModel.phone" #phone="ngModel"/>
+                  <div *ngIf="phone.errors&&phone.touched">
+                      <small class="text-danger" *ngIf="phone.errors['pattern']">Should Enter A Valid Name
+                      </small>
+                  </div>
+              </div>
+              <div class="mb-3">
+                  <label style="display: block;margin-bottom: 12px;" for="birthday">Birthday:</label>
+                  <input style="padding-left: 15px;width: 100%;" type="date" id="birthday" name="birthday"/>
+              </div>
+          </div>
+      </div>
+
+      <button class="save">
+          Save
+      </button>
+      <ng-template *ngIf="regform.invalid ; then thenBlock"></ng-template>
+      <ng-template #thenBlock>
+          <div (mousemove)="saveUserDeetails(regform)"></div>
+      </ng-template>
+
+  </form>
+</div>

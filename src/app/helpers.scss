@@ -1,0 +1,21 @@
+$main-color:#f68b1e;
+$main-color-alt:#e97b0e;
+$main-color-hover:#feeedd;
+$box-shadow:0 4px 8px 0 rgb(0 0 0 / 20%);
+%main-btn{
+  background-color: $main-color;
+  color: #fff;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: $box-shadow;
+  transition: .3s;
+  &:hover{
+    background-color: $main-color-alt;
+  }
+}

@@ -1,0 +1,128 @@
+.saved-items {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  border-radius: 4px;
+  padding-bottom: 1px;
+}
+
+.saved-items h2 {
+  margin-bottom: 0;
+  padding: 6px 14px;
+}
+
+.saved-items hr {
+  padding: 0;
+  margin: 0;
+  background-color: currentColor;
+  opacity: 0.1;
+}
+
+.saved-items .empty-items {
+  text-align: center;
+  line-height: 2.6;
+  padding: 30px;
+  display: none;
+}
+
+.saved-items .empty-items .shopping {
+  font-weight: 500;
+  padding: 10px;
+  background: #f68b1e;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  color: white;
+  border-radius: 4px;
+}
+
+.saved-items .empty-items .shopping:hover {
+  background: #e4811c;
+}
+
+.saved-items .saved-items-details {
+  border: 1px solid #ddd;
+  margin: 12px;
+  border-radius: 4px;
+  padding: 11px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.saved-items .saved-items-details img {
+  height: 104px;
+  width: 104px;
+  margin-top: 7px;
+}
+
+.saved-items .saved-items-details .saved-item-details {
+  margin-left: 20px;
+}
+
+.saved-items .saved-items-details .saved-item-details a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.saved-items .saved-items-details .saved-item-details a p {
+  margin-bottom: 30px;
+}
+
+.saved-items .saved-items-details .saved-item-details .saved-item-price {
+  font-size: 17px;
+}
+
+.saved-items .saved-items-details .saved-item-details p {
+  margin-bottom: 0;
+}
+
+.saved-items .saved-items-details .saved-item-details .saved-item-reval {
+  text-decoration: line-through;
+  opacity: 0.5;
+  font-size: 15px;
+  display: inline-flex;
+}
+
+.saved-item-details span {
+  background: #feeedd;
+  margin-left: 11px;
+  padding: 2px 6px;
+  color: #f68b1e;
+}
+
+.saved-items-details .buy-now {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border: none;
+  background: #f68b1e;
+  padding: 7px 14px;
+  font-weight: 500;
+  color: #fff;
+  font-size: 15px;
+  margin-left: 16px;
+  border-radius: 4px;
+  margin-bottom: 22px;
+}
+
+.saved-items-details .buy-now:hover {
+  background-color: #e4811c;
+}
+
+.saved-items-details .remove-item {
+  margin: 10px 12px;
+  align-items: center;
+  color: #f68b1e;
+  font-weight: 500;
+  border: none;
+  background: none;
+  padding: 4px 5px;
+  border-radius: 4px;
+}
+
+.saved-items-details .remove-item:hover {
+  background: #feeedd;
+}
+
+.saved-items .remove-item svg {
+  margin-right: 15px;
+}/*# sourceMappingURL=saved-items.component.css.map */

@@ -1,0 +1,72 @@
+@import '../helpers.scss';
+.header{
+  background-color: #e61601;
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 3px 3px 0px 0;
+  h2{
+    font-size: 20px;
+  }
+  span{
+    font-size: 18px;
+    .timer{
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+  a{
+    text-decoration: none;
+    color: #fff;
+  }
+}
+.flash-sales-body{
+  padding: 10px 0;
+  background-color: white;
+  .card{
+    padding: 10px;
+    border-radius: 0;
+    border: none;
+    position: relative;
+    color: #111;
+    cursor: pointer;
+    transition: .3s;
+    &:hover{
+      box-shadow: $box-shadow;
+    }
+    .discount{
+      position: absolute;
+      right: 10px;
+      font-size: 13px;
+      color: $main-color;
+      background-color: $main-color-hover;
+      padding: 3px 5px;
+      border-radius: 3px;
+    }
+    .product-title{
+      display: block;
+      width: 100%;
+      font-size: 15px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .price-with-discount{
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .price-without-discount{
+      font-size: 13px;
+      color: rgb(134, 134, 134);
+      text-decoration: line-through;
+    }
+    .items-left{
+      font-size: 13px;
+    }
+    .progress{
+      height: 10px;
+    }
+    .progress-bar{
+      background-color: #f6b01e;
+    }
+  }
+}

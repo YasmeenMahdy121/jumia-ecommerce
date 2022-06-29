@@ -1,0 +1,111 @@
+.orders {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  border-radius: 4px;
+  padding-bottom: 1px;
+}
+
+.orders h2 {
+  margin-bottom: 0;
+  padding: 6px 14px;
+}
+
+.orders hr {
+  padding: 0;
+  margin: 0;
+  background-color: currentColor;
+  opacity: 0.1;
+}
+
+.orders .empty-order {
+  text-align: center;
+  line-height: 2.6;
+  padding: 30px;
+  display: none;
+}
+
+.orders .empty-order .shopping {
+  font-weight: 500;
+  padding: 10px;
+  background: #f68b1e;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  color: white;
+  border-radius: 4px;
+}
+
+.orders .empty-order .shopping:hover {
+  background: #e4811c;
+}
+
+.orders .orders-details {
+  border: 1px solid #ddd;
+  margin: 12px;
+  border-radius: 4px;
+  padding: 11px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.orders .orders-details img {
+  height: 104px;
+  width: 104px;
+  margin-top: 7px;
+}
+
+.orders .orders-details .order-details {
+  margin-left: 20px;
+}
+
+.orders .orders-details .order-details a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.orders .orders-details .order-details a p {
+  margin-bottom: 30px;
+}
+
+.orders .orders-details .order-details .order-price {
+  font-size: 17px;
+}
+
+.orders .orders-details .order-details p {
+  margin-bottom: 0;
+}
+
+.orders .orders-details .order-details .order-reval {
+  text-decoration: line-through;
+  opacity: 0.5;
+  font-size: 15px;
+  display: inline-flex;
+}
+
+.orders .orders-details .order-details span {
+  background: #feeedd;
+  margin-left: 11px;
+  padding: 2px 6px;
+  color: #f68b1e;
+}
+
+.orders .remove-order {
+  margin: 10px 12px;
+  align-items: center;
+  color: #f68b1e;
+  font-weight: 500;
+  border: none;
+  background: none;
+  padding: 4px 5px;
+  border-radius: 4px;
+}
+
+.orders .remove-order:hover {
+  background: #feeedd;
+}
+
+.orders .remove-order svg {
+  margin-right: 15px;
+}/*# sourceMappingURL=orders.component.css.map */

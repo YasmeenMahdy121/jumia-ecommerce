@@ -1,0 +1,98 @@
+
+<div class="container my-5 bg-white">
+    <div class="row">
+        <div class=" col-md-6">
+            <div class="card card-container formdivide ">
+                <img id="profile-img" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" class="profile-img-card" />
+                <h3 class="logintxt text-center"> Login </h3>
+                <form name="form" #regForm="ngForm" (ngSubmit)="login(regForm)">
+
+
+                    <!-- end div -->
+
+                    <div class="form-group">
+                        <!-- <label for="email">Email</label> -->
+                        <input type="email" class="ChangeInputStyle" required placeholder="Email"
+                            pattern="^[A-Z0-9a-z._%+-]+@[A-Za-z0-9]+(.com|.net|.eg|.gov|.org)$" required
+                            [class.is-invalid]="email.invalid && email.touched" name="email"
+                            [(ngModel)]="userModel.email" #email="ngModel" />
+                        <div *ngIf="email.errors&&password.touched">
+                            <small class="text-danger" *ngIf="email.errors['required']">Email is Required</small>
+                            <small class="text-danger" *ngIf="email.errors['pattern']">Should Enter A Valid
+                                Email</small>
+                        </div>
+                    </div>
+                    <div class="form-group" >
+                        <!-- <label for="password">Password</label> -->
+                        <input type="password" class="ChangeInputStyle mt-3" required placeholder="password"
+                            pattern="^\d{8}$" required [class.is-invalid]="password.invalid && password.touched"
+                            name="password" [(ngModel)]="userModel.password" #password="ngModel" />
+                        <div *ngIf="password.errors&&password.touched">
+                            <small class="text-danger" *ngIf="password.errors['required']">password is Required</small>
+                            <small class="text-danger" *ngIf="password.errors['pattern']">password number must be 8
+                                digits</small>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group" id="btns-left">
+                        <button class="btnlogin btn-block form-control">
+                            Login
+                        </button>
+                        <ng-template *ngIf="regForm.invalid ; then thenBlock">
+
+                        </ng-template>
+                        <ng-template #thenBlock>
+                          <!-- form is now valid -->
+
+                          <div (mousemove)="login(regForm)"></div>
+                          <!-- {{Register(regForm)}} -->
+                         <!-- <div> form is not valid</div> -->
+
+                        </ng-template>
+                    </div>
+                    <div class="form-group">
+                        <button class="btnblue btn-block form-control mt-3">
+                            FaceBook
+                        </button>
+                    </div>
+                    <!-- <div class="form-group">
+                <div class="alert alert-danger" role="alert">
+                    Login failed: {{ errorMessage }}
+                </div>
+            </div> -->
+                </form>
+
+                <!-- <div class="alert alert-success">
+
+        </div> -->
+            </div>
+        </div>
+        <!--end -->
+        <div class=" col-md-6">
+            <div class=" card card-container cardright">
+
+                <h3 class="txtright text-center"> Create your Jumia account </h3>
+
+
+                <p class="text-center divright"> Create your Jumia customer account in just a
+                    few clicks! You can register either using your e-mail
+                    address or through your Facebook account.
+
+                </p>
+
+                <div class="form-group ">
+                    <a routerLink="/create_account" class="btnlogin btn-block form-control text-center" style="text-decoration: none;">
+                       CREATE AN ACCOUNT VIA EMAIL
+                    </a>
+                </div>
+                <div class="form-group">
+                    <button class="btnblue btn-block form-control mt-3">
+                       REGISTER WITH FACEBOOK
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--end-->
+    </div>
+</div>

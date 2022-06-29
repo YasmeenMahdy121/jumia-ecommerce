@@ -1,0 +1,127 @@
+@import '../helpers.scss';
+nav{
+  background-color: white;
+  padding: 20px 0;
+  box-shadow: $box-shadow;
+  .nav-logo{
+    width: 150px;
+  }
+  .search-form{
+    width: 58%;
+    margin-left: 80px;
+    @media screen and(max-width:1200px){
+      margin-left: 20px;
+    }
+    @media screen and(max-width:992px){
+      width: 100%;
+      margin-left: 0;
+    }
+    form{
+      input{
+        &::placeholder{
+          color: rgb(145, 145, 145);
+        }
+        &:focus{
+          box-shadow: none;
+        }
+      }
+      button{
+        background-color: $main-color;
+        color: white;
+        border: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        transition: .3s;
+        box-shadow: $box-shadow;
+        &:hover{
+          background-color: $main-color-alt;
+        }
+      }
+      input, button{
+        border-radius: 4px;
+      }
+    }
+  }
+  .dropdown{
+    font-size: 17px;
+    font-weight: 600;
+    .dropdown-toggle:hover + div{
+      transition: .3s;
+      color: $main-color;
+    }
+    .dropdown-menu{
+      left: -50px;
+      width: 200px;
+      border: none;
+      box-shadow: $box-shadow;
+      @media screen and(max-width:650px){
+        left: 0;
+      }
+      .dropdown-item{
+        padding: 10px 10px;
+        font-size: 15px;
+        color: rgb(112, 112, 112);
+      }
+      .nav-orders-link{
+        width: 20px;
+      }
+      .signIn-nav-btn{
+        padding: 15px;
+        a{
+          text-align: center;
+          text-decoration: none;
+          @extend %main-btn;
+        }
+      }
+      .logout-nav-btn {
+        padding: 10px;
+        button{
+          background-color: transparent;
+          color: $main-color;
+          display: block;
+          margin: 0 auto;
+          padding: 3px 10px;
+          border: none;
+          border-radius: 3px;
+          font-weight: 600;
+          transition: .3s;
+          &:hover{
+            background-color: $main-color-hover;
+          }
+        }
+      }
+      .live-chat-btn{
+        padding: 10px;
+        button{
+          @extend %main-btn;
+        }
+      }
+
+    }
+  }
+  .shoppingCart{
+    cursor: pointer;
+    &:hover{
+      transition: .3s;
+      color: $main-color;
+    }
+  }
+  .fa-cart-shopping{
+    font-size: 20px;
+  }
+  .badge{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%,-50%);
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    border-radius: 50%;
+    background-color: $main-color;
+
+  }
+}

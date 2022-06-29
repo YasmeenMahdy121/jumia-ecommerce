@@ -1,0 +1,183 @@
+<div class="container pb-5 pt-3">
+  <div class="row">
+      <div class="col-md-3">
+          <aside>
+              <h3>BRAND</h3>
+              <a >
+                  <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                          50% or more
+                      </label>
+                  </div>
+              </a>
+              <a >
+                  <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                          40% or more
+                      </label>
+                  </div>
+              </a>
+              <a >
+                  <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                          30% or more
+                      </label>
+                  </div>
+              </a>
+              <a >
+                  <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                          20% or more
+                      </label>
+                  </div>
+              </a>
+              <a >
+                  <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                          10% or more
+                      </label>
+                  </div>
+              </a>
+              <hr />
+              <h3>DISCOUNT</h3>
+              <a >
+                  <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                          50% or more
+                      </label>
+                  </div>
+              </a>
+              <a >
+                  <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                          40% or more
+                      </label>
+                  </div>
+              </a>
+              <a >
+                  <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                          30% or more
+                      </label>
+                  </div>
+              </a>
+              <a >
+                  <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                          20% or more
+                      </label>
+                  </div>
+              </a>
+              <a >
+                  <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                          10% or more
+                      </label>
+                  </div>
+              </a>
+              <hr />
+              <div class="rates">
+                  <h3>Stars</h3>
+                  <a >
+                      <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" />
+                          <label class="form-check-label" for="flexRadioDefault1">
+                              <div class="ratings">
+                                  <i class="fa fa-star rating-color"></i>
+                                  <i class="fa fa-star rating-color"></i>
+                                  <i class="fa fa-star rating-color"></i>
+                                  <i class="fa fa-star rating-color"></i>
+                                  <i class="fa fa-star"></i>
+                              </div>
+                          </label>
+                      </div>
+                  </a>
+                  <a >
+                      <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" />
+                          <label class="form-check-label" for="flexRadioDefault1">
+                              <div class="ratings">
+                                  <i class="fa fa-star rating-color"></i>
+                                  <i class="fa fa-star rating-color"></i>
+                                  <i class="fa fa-star rating-color"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                              </div>
+                          </label>
+                      </div>
+                  </a>
+                  <a >
+                      <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" />
+                          <label class="form-check-label" for="flexRadioDefault1">
+                              <div class="ratings">
+                                  <i class="fa fa-star rating-color"></i>
+                                  <i class="fa fa-star rating-color"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                              </div>
+                          </label>
+                      </div>
+                  </a>
+                  <a >
+                      <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" />
+                          <label class="form-check-label" for="flexRadioDefault1">
+                              <div class="ratings">
+                                  <i class="fa fa-star rating-color"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                                  <i class="fa fa-star"></i>
+                              </div>
+                          </label>
+                      </div>`
+                  </a>
+              </div>
+              <hr />
+              <h3>PRICE (EGP)</h3>
+              <div style="justify-content: space-between;" class="slider-values d-flex">
+                  <span>0</span>
+                  <span style="margin-right: 17px;">{{value}}</span>
+              </div>
+              <mat-slider [(ngModel)]="value" tickInterval="auto" thumbLabel="thumbLabel" [displayWith]="formatLabel"
+                  tickInterval="1" step="1" min="0" max="100" aria-label="units"></mat-slider>
+              <button type="submit" class="apply">APPLY</button>
+          </aside>
+      </div>
+
+
+      <div class="col-md-9">
+          <div class="header d-flex flex-column flex-md-row justify-content-between align-items-center">
+              <h2><span>Gaming |</span> Top Deals</h2>
+              <a routerLink="/categories/category">SEE ALL <i class="fas fa-chevron-right"></i></a>
+          </div>
+          <div class="row m-0 category-body g-lg-0 g-3">
+              <div class="col-lg-3 col-md-4 col-sm-6 p-1" *ngFor="let product of categoryProducts">
+                  <div class="card">
+                      <span class="discount">-{{product.discount}}%</span>
+                      <div class="card-img">
+                          <img class="w-100 mt-2" src={{product.image}} alt="">
+                      </div>
+                      <div class="card-content d-flex flex-column">
+                          <span class="product-title">{{product.title}}</span>
+                          <span class="price-with-discount my-2">EGP {{((product.discount/100)*product.price) | number:'1.2-3' }}</span>
+                          <span class="price-without-discount">EGP {{product.price | number:'1.2-3'}}</span>
+                      </div>
+                      <button id="card_btn" class="btn btn-block" (click)="addToCart(product)">Add to cart</button>
+                  </div>
+          </div>
+      </div>
+  </div>
+</div>

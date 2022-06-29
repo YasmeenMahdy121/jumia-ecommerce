@@ -1,0 +1,42 @@
+<div class="category">
+  <div class="container py-4 pb-5">
+      <div class="row bg-white">
+          <div class="col-md-4">
+              <img width="100%" src={{product.image}} alt=""/>
+          </div>
+          <div class="col-md-8">
+              <div class="category-details">
+
+                  <div class="d-flex justify-content-between align-items-center">
+                      <h2>{{product.title}}</h2>
+                      <h4 class="add-to-saved">
+                          <i class="material-icons" matsuffix="matSuffix" (click)="saveItem(product)">{{hide ? 'favorite_border':'favorite'}}</i>
+                      </h4>
+                  </div>
+                  <div class="ratings">
+                      <i class="fa fa-star rating-color" ></i>
+                      <i class="fa fa-star rating-color"></i>
+                      <i class="fa fa-star rating-color"></i>
+                      <i class="fa fa-star rating-color"></i>
+                      <i class="fa fa-star"></i>
+                  </div>
+                  <hr/>
+                  <h6 class="category-price">
+                    EGP {{((product.discount/100)*product.price) | number:'1.2-3' }}
+                  </h6>
+                  <p class="category-reval">EGP {{product.price | number:'1.2-3'}}
+                  </p>
+                  <span class="reval">-{{product.discount}}%</span>
+                  <p class="delivery">Free delivery (you are saving EGP 10.83) to 6th of October</p>
+                  <button class="add-to-card" type="submit" (click)="addToCart(product)">ADD TO CARD</button>
+                  <!-- <button class="add-to-card" *ngIf="this.isButtonVisible" (click)="this.isButtonVisible = false" type="submit">ADD TO CARD</button> -->
+                  <div class="product-num d-flex"><!-- <button class="decrease">-</button> -->
+                      <!-- <span>1</span> -->
+                      <!-- <button style="font-size: 21px;" class="increase">+</button> -->
+                      <!-- <span>(1 item(s) added)</span> -->
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

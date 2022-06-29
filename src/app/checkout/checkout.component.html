@@ -1,0 +1,109 @@
+<div class="container my-4">
+    <div class="modal-dialog" id="model">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="mt-4 mx-4">
+                    <div class="text-center">
+                        <h3 id="head">Payment Details</h3>
+                    </div>
+                    <div class="form mt-4 pb-4">
+                        <form [formGroup]="checkoutForm" #regForm="ngForm" (ngSubmit)="Checkbtn(regForm)">
+
+                            <div class="d-flex flex-row">
+                                <div class="inputbox"> <input type="text" name="name" min="1" max="999"
+                                        formControlName="firstName" class="form-control"
+                                        [class.is-invalid]="firstName?.invalid&&firstName?.touched" required="required">
+                                    <span>* First Name</span>
+                                    <div *ngIf="firstName?.invalid&&firstName?.touched">
+
+                                        <small class="text-danger" *ngIf="firstName?.errors?.['minlength']">Name
+                                            must be at least 3 characters</small>
+                                    </div>
+                                </div>
+                                <div class="inputbox ms-4"> <input type="text" name="name" min="1" max="999"
+                                        formControlName="lastName" class="form-control"
+                                        [class.is-invalid]="lastName?.invalid&&lastName?.touched" required="required">
+                                    <span>* Last Name</span>
+                                    <div *ngIf="lastName?.invalid&&lastName?.touched">
+
+                                        <small class="text-danger" *ngIf="lastName?.errors?.['minlength']">Name
+                                            must be at least 3 characters</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inputbox"> <input type="email" name="name" min="1" max="999"
+                                    [class.is-invalid]="email?.invalid&&email?.touched" formControlName="email"
+                                    class="form-control" required="required">
+                                <span>* Email Address</span>
+                                <div *ngIf="email?.invalid&&email?.touched">
+
+                                  <small class="text-danger" *ngIf="lastName?.errors?.['required']">Email is required</small>
+                                      <small class="text-danger" *ngIf="lastName?.errors?.['pattern']">Email not match correct format</small>
+                              </div>
+
+                            </div>
+                            <div class="inputbox"> <input type="text" name="name" min="1" max="999"
+                                    [class.is-invalid]="number?.invalid&&number?.touched" formControlName="number"
+                                    class="form-control" required="required">
+                                <span>* Mobile Number</span>
+                                <div *ngIf="number?.invalid&&number?.touched">
+
+                                    <small class="text-danger" *ngIf="number?.errors?.['minlength']">Mobile
+                                        must be at least 11 numbers</small>
+                                </div>
+                            </div>
+                            <div class="inputbox"> <input type="text" name="name" class="form-control"
+                                    [class.is-invalid]="address?.invalid&&address?.touched" formControlName="address"
+                                    required="required"> <span>* Address</span>
+
+                            </div>
+
+                            <div class="inputbox"> <input type="text" name="name" class="form-control"
+                                    formControlName="cardName" required="required"
+                                    [class.is-invalid]="cardName?.invalid&&cardName?.touched"> <span>*
+                                    Cardholder Name</span>
+
+                            </div>
+                            <div class="inputbox"> <input type="text" name="name" min="1" max="999"
+                                    formControlName="cardNumber" class="form-control" required="required"
+                                    [class.is-invalid]="cardNumber?.invalid&&cardNumber?.touched"> <span>*
+                                    Card Number</span>
+
+                                <div *ngIf="cardNumber?.invalid&&cardNumber?.touched">
+
+                                    <small class="text-danger" *ngIf="cardNumber?.errors?.['minlength']">Card
+                                        must be at least 16 Numbers</small>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <div class="inputbox"> <input type="text" name="name" min="1" max="999"
+                                        formControlName="exDate" class="form-control" required="required"
+                                        [class.is-invalid]="exDate?.invalid&&exDate?.touched"> <span>*
+                                        Expiration Date</span>
+
+                                </div>
+                                <div class="inputbox ms-4"> <input type="text" name="name" min="1" max="999"
+                                        formControlName="cvv" class="form-control" required="required"
+                                        [class.is-invalid]="cvv?.invalid&&cvv?.touched"> <span>* CVV</span>
+                                    <div *ngIf="cvv?.invalid&&cvv?.touched">
+
+                                        <small class="text-danger" *ngIf="cvv?.errors?.['minlength']">CVV
+                                            must be at least 3 characters</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pay"> <button id="button1" type="submit"
+                                        class="btn btn-warning btn-block w-100">Confirm Order</button>
+                                <ng-template *ngIf="regForm.invalid ; then thenBlock">
+                                </ng-template>
+                                <ng-template #thenBlock>
+                                    <div (mousemove)="Checkbtn(regForm)"></div>
+                                </ng-template>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

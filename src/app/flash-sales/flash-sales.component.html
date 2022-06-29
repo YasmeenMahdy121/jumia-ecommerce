@@ -1,0 +1,26 @@
+<div class="container py-5">
+  <div class="header d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <h2>Flash Sales Every day</h2>
+    <span class="">Time Left: <span class="timer">{{12+'h : '+16+'m : '+52+'s'}}</span></span>
+    <a routerLink="/flash_sales">SEE ALL <i class="fas fa-chevron-right"></i></a>
+  </div>
+  <div class="row m-0 flash-sales-body g-lg-0 g-3">
+    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 p-1" *ngFor="let product of flashSalesProducts?.slice(0, 6)">
+      <div class="card" (click)="goToProductDetails(product.id)">
+        <span class="discount">-{{product.flash_sales_discount}}%</span>
+        <div class="card-img">
+          <img class="w-100 mt-2" src={{product.image}} alt="">
+        </div>
+        <div class="card-content d-flex flex-column">
+          <span class="product-title">{{product.title}}</span>
+          <span class="price-with-discount">EGP {{((product.discount/100)*product.price) | number:'1.2-3' }}</span>
+          <span class="price-without-discount">EGP {{product.price | number:'1.2-3'}}</span>
+          <!-- <span class="items-left">34 items left</span>
+          <div class="progress mt-2">
+            <div class="progress-bar" style="width: 34%;"></div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,134 @@
+
+<div class="container my-5">
+    <div class="row">
+        <div class=" col-12 ">
+            <div class="card card-container formdivide ">
+                <img id="profile-img" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" class="profile-img-card" />
+                <h3 class="logintxt text-center"> Sign Up </h3>
+                <form name="form" #regForm="ngForm" (ngSubmit)="Register(regForm)">
+
+                    <div class="row">
+                        <div class="form-group col-6">
+
+                            <input type="text" class="ChangeInputStyle" name="firstName" placeholder="First Name "
+                                required pattern="^^[a-zA-Z]{3,}$"
+                                [class.is-invalid]="firstname.invalid && firstname.touched" name="firstName"
+                                [(ngModel)]="userModel.firstname" #firstname="ngModel" />
+                                <div *ngIf="firstname.errors&&firstname.touched">
+                                    <small class="text-danger" *ngIf="firstname.errors['required']">First Name  is Required</small>
+                                    <small class="text-danger" *ngIf="firstname.errors['pattern']">Should Enter A Valid
+                                        Name </small>
+                                </div>
+
+                        </div>
+                        <div class="form-group col-6">
+
+                            <input type="text" class="ChangeInputStyle" name="lastName" placeholder="Last Name"
+                                required  pattern="^[a-zA-Z]{3,}$"
+                                [class.is-invalid]="lastname.invalid && lastname.touched" name="lastName"
+                                [(ngModel)]="userModel.lastname" #lastname="ngModel" />
+                                <div *ngIf="lastname.errors&&firstname.touched">
+                                    <small class="text-danger" *ngIf="lastname.errors['required']">Last Name  is Required</small>
+                                    <small class="text-danger" *ngIf="lastname.errors['pattern']">Should Enter A Valid
+                                        Name </small>
+                                </div>
+
+                        </div>
+                    </div>
+                    <!--that conytains Email and password-->
+                    <div class="row mt-4">
+
+                        <div class="form-group col-6">
+                            <!-- <label for="email">Email</label> -->
+                            <input type="email" class="ChangeInputStyle" name="email" placeholder="Email" required
+                            pattern="^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+[A-Za-z]{2,4}$"
+                            [class.is-invalid]="email.invalid && email.touched" name="email"
+                            [(ngModel)]="userModel.email" #email="ngModel"/>
+                            <div *ngIf="email.errors&&email.touched">
+                                <small class="text-danger" *ngIf="email.errors['required']">Email is Required</small>
+                                <small class="text-danger" *ngIf="email.errors['pattern']">Should Enter A Valid
+                                    Email</small>
+                            </div>
+
+                        </div>
+                        <div class="form-group col-6">
+
+                            <input type="password" class="ChangeInputStyle" name="password" required
+                                placeholder="password"
+                                pattern="^\d{8}$" required [class.is-invalid]="password.invalid && password.touched"
+                            name="password" [(ngModel)]="userModel.password" #password="ngModel"/>
+                            <div *ngIf="password.errors&&password.touched">
+                                <small class="text-danger" *ngIf="password.errors['required']">Password  is Required</small>
+                                <small class="text-danger" *ngIf="password.errors['pattern']">password  must be 8
+                                    digits</small>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- end div  and Begin phone number-->
+                    <div class="row mt-4">
+                        <div class="form-group col-2" >
+
+                            <input type="text" class="ChangeInputStyle" name="staticnum" value="+20" readonly />
+
+                        </div>
+                        <div class="form-group col-10 lastdiv">
+
+                            <input type="email" class="ChangeInputStyle"
+                                placeholder="Phone Number (Optional)"
+                                pattern="^\d{10}$" required [class.is-invalid]="phone.invalid && phone.touched"
+                                name="txtPhone" [(ngModel)]="userModel.phone"  #phone="ngModel" />
+                                <div *ngIf="phone.errors&&phone.touched">
+                                    <!-- <small class="text-danger" *ngIf="phone.errors['required']">Phone is Required</small> -->
+                                    <small class="text-danger" *ngIf="phone.errors['pattern']">Phone number must be 11 digits</small>
+                                   </div>
+
+                        </div>
+                    </div>
+                    <!-- Default checkbox -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        <label class="form-check-label" for="flexCheckDefault">I accept <a href="#">the terms & conditions</a></label>
+                    </div>
+
+                    <!-- Checked checkbox -->
+                    <div class="form-check checkboxsec">
+                        <input class="form-check-input handlecheckbox" type="checkbox" checked id="flexCheckDefault" />
+                        <label class="form-check-label" for="flexCheckDefault">I want to recieve jumia News Letters with the best  deals and offers</label>
+                    </div>
+                    <div class="form-group">
+                        <button class="btnlogin btn-block form-control" id="register">
+                            CREATE ACCOUNT
+                        </button>
+                         <ng-template *ngIf="regForm.valid ; then thenBlock">
+
+                        </ng-template>
+                        <ng-template #thenBlock>
+                           form is now valid
+
+                          <div (mousemove)="Register(regForm)"></div>
+                           <!-- {{Register(regForm)}} -->
+                         <!-- <div> form is not valid</div> -->
+
+                         </ng-template>
+                    </div>
+                    <div class="form-group">
+                        <button class="btnblue btn-block form-control mt-3">
+                            SIGN WITH FACEBOOK
+                        </button>
+                    </div>
+
+
+                    <a routerLink="/login" class="d-block text-center mt-3" style="cursor: pointer; color: #f68b1e;"> Already have an account</a>
+
+                </form>
+
+
+
+            </div>
+        </div>
+    </div>
+    <!--end -->
+
+    <!--end-->
+</div>
